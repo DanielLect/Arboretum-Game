@@ -84,8 +84,9 @@ public class CameraController : MonoBehaviour
     void zoomCamera()
     {
         float zoom_input = Input.GetAxis(input_zoom);
+        float curZoomSpeed = zoomSpeed * getZoomPercent();
 
-        curCamDistance += -1 * zoom_input * zoomSpeed;
+        curCamDistance += -1 * zoom_input * curZoomSpeed;
 
         curCamDistance = Mathf.Max(curCamDistance, minZoom);
         curCamDistance = Mathf.Min(curCamDistance, maxZoom);
@@ -96,6 +97,7 @@ public class CameraController : MonoBehaviour
     void moveCamera()
     {
         Vector3 mouse_input = new Vector3(Input.GetAxis(input_mouse_x), 0, Input.GetAxis(input_mouse_y));
+        float curMovementSpeed = movementSpeed * getZoomPercent();
 
         //forward_axis = transform.right;
         //Vector3 forward_axis = new Vector3(transform.right.z, 0, transform.right.x);
@@ -103,7 +105,7 @@ public class CameraController : MonoBehaviour
         Vector3 world_movement = transform.right * Input.GetAxis(input_mouse_x) + transform.forward * Input.GetAxis(input_mouse_y);
         world_movement *= -1;
 
-        transform.position += Time.deltaTime * movementSpeed * world_movement;
+        transform.position += Time.deltaTime * curMovementSpeed * world_movement;
 
     }
 
@@ -116,5 +118,10 @@ public class CameraController : MonoBehaviour
         }
         transform.position = new Vector3(transform.position.x, targetY, transform.position.z);
 
+    }
+
+    float getZoomPercent()
+    {
+        return curCamDistance / maxZoom;
     }
 }

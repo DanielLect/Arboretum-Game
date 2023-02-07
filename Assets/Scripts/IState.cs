@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IState
 {
-
     bool endState();
+    bool startState();
 }

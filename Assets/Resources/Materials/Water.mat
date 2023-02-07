@@ -102,17 +102,19 @@ Material:
     - _Depth: 1.93
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _Distance: 1.66
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _Float: 2.69
     - _Foam_Color: 2
-    - _Foam_Power: 8
+    - _Foam_Power: 12
     - _Foam_Speed: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _OutlineDistance: 0.46
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -131,9 +133,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.26352793, g: 0.81487733, b: 0.8867924, a: 1}
+    - _Color: {r: 0.4185208, g: 0.7514379, b: 0.8962264, a: 1}
+    - _Deep_Color: {r: 0.016820924, g: 0.16204345, b: 0.3962264, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Foam_Size: {r: 0.4, g: 0.4, b: 0, a: 0}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 50, g: 50, b: 0, a: 0}
   m_BuildTextureStacks: []

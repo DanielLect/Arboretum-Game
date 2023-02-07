@@ -23,18 +23,19 @@ public class PlayerStateManager : MonoBehaviour
 
     public bool setCurrentState(IState state)
     {
-        if (currentState == null)
+        if (currentState != null && !currentState.endState())
+        {
+            return false;
+        }
+
+        currentState = null;
+
+        if (state.startState())
         {
             currentState = state;
-            return true;
         }
-        //if state end was sucessful
-        if (currentState.endState())
-        {
-            currentState = state;
-            return true;
-        }
-        return false;
+
+        return (currentState != null);
     }
     public IState getCurrentState()
     {
