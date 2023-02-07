@@ -1021,17 +1021,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f4d4c9ad3d65546b746687a5857771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trunk_origin: {fileID: 493296833}
+  growing_object: {fileID: 493296833}
   growthRate: 0
   timeScale: 1
   age: 0
   deltaGrowth: 0
   sunlight: 100000
   water: 100000
-  seedlingAge: {x: 0, y: 0.25, z: 15, w: 15}
-  sapplingAge: {x: 72, y: 0.5, z: 300, w: 400}
-  youngAge: {x: 720, y: 0.75, z: 2000, w: 3000}
-  matureAge: {x: 3840, y: 1, z: 0, w: 0}
+  starting_size: {x: 0, y: 0, z: 0}
+  starting_age:
+  - 0
+  - 72
+  - 720
+  - 3860
+  ending_size:
+  - 0.25
+  - 0.5
+  - 0.75
+  - 1
+  required_sunlight:
+  - 0
+  - 0
+  - 0
+  - 0
+  required_water:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &1096392305
 GameObject:
   m_ObjectHideFlags: 0
