@@ -17,15 +17,7 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
     {
         if (!active)
         {
-            if (PlayerStateManager.Get().setCurrentState(this))
-            {
-                active = true;
-                placed_instance = GameObject.Instantiate(placed_prefab);
-                //spawn the placed_instance far away so it doesnt get in the way
-                placed_instance.transform.position = Vector3.one * -100;
-                GetComponent<Image>().color = activeColor;
-                return;
-            }
+            PlayerStateManager.Get().setCurrentState(this);
         } else
         {
             PlayerStateManager.Get().clearState();
@@ -76,6 +68,16 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
             placed_instance = null;
         }
 
+        return true;
+    }
+
+    public bool startState()
+    {
+        active = true;
+        placed_instance = GameObject.Instantiate(placed_prefab);
+        //spawn the placed_instance far away so it doesnt get in the way
+        placed_instance.transform.position = Vector3.one * -100;
+        GetComponent<Image>().color = activeColor;
         return true;
     }
 }
