@@ -22,6 +22,7 @@ public class Growth : MonoBehaviour
     public float sunlight;
     public float water;
     public Vector3 starting_size = new Vector3(0f, 0f, 0f);
+    public int treeStage;
 
     public float[] starting_age;
     public float[] ending_size;
@@ -31,14 +32,15 @@ public class Growth : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+        treeStage = TreeStage();
         age += GetTimeScale();
         growthRate = UpdateGrowthRate(TreeStage());
         if (!NutrientsMet())
         {
             growthRate = 0f;
         }
-        deltaGrowth = Time.deltaTime * GetTimeScale() * growthRate;
+        deltaGrowth = GetTimeScale() * growthRate;
         growing_object.transform.localScale += new Vector3(deltaGrowth, deltaGrowth, deltaGrowth);
 
 
@@ -48,7 +50,7 @@ public class Growth : MonoBehaviour
     int TreeStage() 
     {
         int temp = 0;
-        for(int i = 0; i < starting_age.Length - 1; i++)
+        for(int i = 0; i < starting_age.Length; i++)
         {
             if (age > starting_age[i])
             {
@@ -61,7 +63,7 @@ public class Growth : MonoBehaviour
     {
         if (tree_int == starting_age.Length - 1)
         {
-            return ending_size[starting_age.Length - 1] * (1 / starting_age[starting_age.Length - 1]);
+            return 0;
         }
         return ending_size[tree_int] * (1 / starting_age[tree_int + 1]);
 

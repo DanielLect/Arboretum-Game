@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 716682452}
   - component: {fileID: 716682454}
   m_Layer: 5
-  m_Name: Tree 1 Icon
+  m_Name: Oak_Tree Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e402b49b2c021443bc700433b2d5534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placed_prefab: {fileID: 4302825526633313084, guid: 003649ebdcb56da4dbc59783754d4147,
+  placed_prefab: {fileID: 1757303121680689796, guid: d2429ea23fc328d4e881b62e82a9cfe7,
     type: 3}
   activeColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
