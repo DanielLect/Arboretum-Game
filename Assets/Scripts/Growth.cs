@@ -63,7 +63,12 @@ public class Growth : MonoBehaviour
     {
         if (tree_int == starting_age.Length - 1)
         {
-            return 0;
+            //stops the tree from growing if it reaches the last entry in the ending size array
+            if (growing_object.transform.localScale.x >= ending_size[tree_int]) 
+            {
+                return 0f;
+            }
+            return ending_size[tree_int] * (1 / starting_age[tree_int]);
         }
         return ending_size[tree_int] * (1 / starting_age[tree_int + 1]);
 

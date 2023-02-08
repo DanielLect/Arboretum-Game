@@ -274,8 +274,8 @@ Transform:
   m_GameObject: {fileID: 1757303120804642934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.49, y: 1.49, z: 1.49}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2299519296329426934}
   - {fileID: 1757303121754250699}
@@ -457,9 +457,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1757303121680689795}
-  - component: {fileID: 1757303121680689794}
   m_Layer: 0
-  m_Name: oak_tree
+  m_Name: static_oak_tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,47 +480,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1757303121680689794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757303121680689796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b2b18d9a5ab0f42886529f6dd9c5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growing_object: {fileID: 1757303120804642934}
-  growthRate: 0
-  timeScale: 1
-  age: 0
-  deltaGrowth: 0
-  sunlight: 10000
-  water: 10000
-  starting_size: {x: 0, y: 0, z: 0}
-  treeStage: 0
-  starting_age:
-  - 0
-  - 1
-  - 2
-  - 3
-  ending_size:
-  - 0.25
-  - 0.5
-  - 0.75
-  - 1
-  required_sunlight:
-  - 0
-  - 0
-  - 0
-  - 0
-  required_water:
-  - 0
-  - 0
-  - 0
-  - 0
 --- !u!1 &1757303121754250700
 GameObject:
   m_ObjectHideFlags: 0

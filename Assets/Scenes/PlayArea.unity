@@ -864,9 +864,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placed_prefab: {fileID: 5790082363509815341, guid: c92f93a0e004e3940910f451806760d4,
     type: 3}
+  preview_prefab: {fileID: 0}
   activeColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
-  placed_instance: {fileID: 0}
+  preview_placed_instance: {fileID: 0}
 --- !u!114 &691166931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,9 +997,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placed_prefab: {fileID: 1757303121680689796, guid: d2429ea23fc328d4e881b62e82a9cfe7,
     type: 3}
+  preview_prefab: {fileID: 1757303121680689796, guid: 53d13364f3c2c3f42a8992446b3f2e44,
+    type: 3}
   activeColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
-  placed_instance: {fileID: 0}
+  preview_placed_instance: {fileID: 0}
 --- !u!1 &780901917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,9 +1294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placed_prefab: {fileID: 4999827386654293309, guid: ebacc48de8169904994954faf90a36e1,
     type: 3}
+  preview_prefab: {fileID: 0}
   activeColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
-  placed_instance: {fileID: 0}
+  preview_placed_instance: {fileID: 0}
 --- !u!114 &879823338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,9 +1389,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placed_prefab: {fileID: 8715331383392802404, guid: 64b78dd9af579e341bcb6f2685a2dc80,
     type: 3}
+  preview_prefab: {fileID: 0}
   activeColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
-  placed_instance: {fileID: 0}
+  preview_placed_instance: {fileID: 0}
 --- !u!114 &1354032659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,9 +1627,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placed_prefab: {fileID: 711603473412678102, guid: 2ce74cba2601e934d9c6506605b7ccab,
     type: 3}
+  preview_prefab: {fileID: 0}
   activeColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
-  placed_instance: {fileID: 0}
+  preview_placed_instance: {fileID: 0}
 --- !u!114 &1491799517
 MonoBehaviour:
   m_ObjectHideFlags: 0
