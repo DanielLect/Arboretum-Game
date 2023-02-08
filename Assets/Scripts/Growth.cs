@@ -32,7 +32,7 @@ public class Growth : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        age += Time.deltaTime * GetTimeScale();
+        age += GetTimeScale();
         growthRate = UpdateGrowthRate(TreeStage());
         if (!NutrientsMet())
         {
@@ -77,7 +77,7 @@ public class Growth : MonoBehaviour
     }
     float GetTimeScale()
     {
-        return timeScale;
+        return Time.deltaTime * timeScale;
     }
     Vector3 GetStartingSize()
     {
