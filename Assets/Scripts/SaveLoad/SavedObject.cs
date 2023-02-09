@@ -11,46 +11,17 @@ public class SavedObject : MonoBehaviour
     
     private void Start()
     {
-        PersistentData data1 = new CoreData();
-        data1.addData(new CoreData());
-        data1.addData(new CoreData());
-        data1.addData(new CoreData());
-
-        data1.saveData(gameObject);
-
-        //save(data1);
-        load();
-
 
     }
 
-    public void save(PersistentData data)
+    public PersistentData createData()
     {
+        PersistentData data = new CoreData();
 
-        string path = Application.persistentDataPath + "/data.bin";
+        return data;
 
-        BinaryFormatter formatter = new BinaryFormatter();
 
-        FileStream saveFile = File.Create(path);
-
-        formatter.Serialize(saveFile, data);
-
-        saveFile.Close();
     }
 
-    public void load()
-    {
-        string path = Application.persistentDataPath + "/data.bin";
-
-        BinaryFormatter formatter = new BinaryFormatter();
-
-        FileStream saveFile = File.Open(path, FileMode.Open);
-
-        PersistentData loadData = (PersistentData)formatter.Deserialize(saveFile);
-
-        loadData.loadData();
-
-        saveFile.Close();
-    }
 
 }
