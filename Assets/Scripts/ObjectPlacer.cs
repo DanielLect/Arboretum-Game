@@ -8,11 +8,12 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
 {
     bool active = false;
     public GameObject placed_prefab;
+    public GameObject preview_prefab;
 
     public Color activeColor;
     public Color idleColor;
 
-    public GameObject placed_instance;
+    public GameObject preview_placed_instance;
     public void OnPointerDown(PointerEventData eventData)
     {
         if (!active)
@@ -41,15 +42,25 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 100f))
                 {
-                    placed_instance.transform.position = hit.point;
-                    placed_instance.transform.rotation = Quaternion.LookRotation(hit.normal, Vector3.up);
-                    placed_instance.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+                    preview_placed_instance.transform.position = hit.point;
+                    preview_placed_instance.transform.rotation = Quaternion.LookRotation(hit.normal, Vector3.up);
+                    preview_placed_instance.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
 
                     if (Input.GetMouseButtonDown(0))
                     {
-                        placed_instance.transform.Rotate(hit.normal, Random.value * 360f, Space.World);
+                        GameObject.Destroy(preview_placed_instance);
+                        preview_placed_instance = GameObject.Instantiate(placed_prefab);
+                        preview_placed_instance.transform.position = hit.point;
+                        preview_placed_instance.transform.Rotate(hit.normal, Random.value * 360f, Space.World);
 
-                        placed_instance = GameObject.Instantiate(placed_prefab);
+                        Growth deleteLater = preview_placed_instance.GetComponent<Growth>();
+
+                        if (deleteLater != null)
+                        {
+                            deleteLater.testmethoddelete();
+                        }
+
+                        preview_placed_instance = GameObject.Instantiate(preview_prefab);
                     }
                 }
             }
@@ -62,10 +73,10 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
     {
         active = false;
         GetComponent<Image>().color = idleColor;
-        if (placed_instance != null)
+        if (preview_placed_instance != null)
         {
-            GameObject.Destroy(placed_instance);
-            placed_instance = null;
+            GameObject.Destroy(preview_placed_instance);
+            preview_placed_instance = null;
         }
 
         return true;
@@ -74,9 +85,9 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
     public bool startState()
     {
         active = true;
-        placed_instance = GameObject.Instantiate(placed_prefab);
+        preview_placed_instance = GameObject.Instantiate(preview_prefab);
         //spawn the placed_instance far away so it doesnt get in the way
-        placed_instance.transform.position = Vector3.one * -100;
+        preview_placed_instance.transform.position = Vector3.one * -100;
         GetComponent<Image>().color = activeColor;
         return true;
     }

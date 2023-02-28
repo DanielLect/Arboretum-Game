@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: PrefabDatabase
   m_EditorClassIdentifier: 
   templates:
-  - {fileID: -7567622224800673705, guid: ebacc48de8169904994954faf90a36e1, type: 3}
-  - {fileID: -6092932135932691934, guid: 64b78dd9af579e341bcb6f2685a2dc80, type: 3}
-  - {fileID: 7875889845935063060, guid: c92f93a0e004e3940910f451806760d4, type: 3}
-  - {fileID: -9006618788538727478, guid: 2ce74cba2601e934d9c6506605b7ccab, type: 3}
-  - {fileID: -718386110645497997, guid: 003649ebdcb56da4dbc59783754d4147, type: 3}
+  - {fileID: 2965703927022197561, guid: ebacc48de8169904994954faf90a36e1, type: 3}
+  - {fileID: 6207017927954147958, guid: 64b78dd9af579e341bcb6f2685a2dc80, type: 3}
+  - {fileID: 2944778092101263376, guid: 245848f02a9e75040b9f9792fd218ccd, type: 3}
+  - {fileID: 3658803642665954775, guid: c92f93a0e004e3940910f451806760d4, type: 3}
+  - {fileID: 9206096498975067757, guid: 2ce74cba2601e934d9c6506605b7ccab, type: 3}
+  - {fileID: -2202424336933791553, guid: d2429ea23fc328d4e881b62e82a9cfe7, type: 3}
+  - {fileID: 6095762224283554001, guid: 003649ebdcb56da4dbc59783754d4147, type: 3}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStateManager : MonoBehaviour
 {
@@ -62,6 +63,15 @@ public class PlayerStateManager : MonoBehaviour
         if (Input.GetAxis("escape_button") == 1)
         {
             clearState();
+        }
+
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.S) && (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.S)))
+        {
+            SaveLoadManager.saveScene("save1");
+        }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.L) && (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.L)))
+        {
+            SaveLoadManager.loadScene("save1");
         }
     }
 }

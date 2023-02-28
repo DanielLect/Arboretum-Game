@@ -20,7 +20,7 @@ public class PrefabDatabaseEditor : Editor
     }
     void ResyncDatabase()
     {
-        SavedObject[] templates = Resources.LoadAll<SavedObject>("Prefabs");
+        SavedCore[] templates = Resources.LoadAll<SavedCore>("Prefabs");
 
         PrefabDatabase database = (PrefabDatabase)target;
         SerializedObject serializedObject = new SerializedObject(database);
@@ -49,7 +49,7 @@ public class PrefabDatabaseEditor : Editor
         //serializedObject.ApplyModifiedProperties();
     }
 
-    void ResyncSavedObject(SavedObject saved, int index)
+    void ResyncSavedObject(SavedCore saved, int index)
     {
 
         SerializedObject serializedObject = new SerializedObject(saved);

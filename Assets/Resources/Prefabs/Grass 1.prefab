@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6562115841506271895}
   - component: {fileID: 7835852144442797362}
   - component: {fileID: 5429790064910408184}
-  - component: {fileID: 7875889845935063060}
+  - component: {fileID: 3658803642665954775}
+  - component: {fileID: 3757985952580789534}
   m_Layer: 0
   m_Name: Grass 1
   m_TagString: Untagged
@@ -84,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7875889845935063060
+--- !u!114 &3658803642665954775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +94,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5790082363509815341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3c856f0e79e6749ac512bd9ac0b3c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a83420ad33d6054a886a8fb79f1ef37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 3
+--- !u!114 &3757985952580789534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790082363509815341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298afdba86df6da4ca53266d03af0811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

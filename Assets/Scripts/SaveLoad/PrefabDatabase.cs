@@ -7,10 +7,10 @@ using UnityEngine;
 public class PrefabDatabase : ScriptableObject
 {
 
-    public SavedObject[] templates;
+    public SavedCore[] templates;
 
 
-    public SavedObject getFromDatabase(int id)
+    public SavedCore getFromDatabase(int id)
     {
         return templates[id];
     }

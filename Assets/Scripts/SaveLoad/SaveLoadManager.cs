@@ -6,11 +6,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveLoadManager
 {
+    public static PrefabDatabase prefab_database;
 
-    PersistentData data;
     private static PersistentData buildDataFromScene()
     {
 
+        SavedCore[] savedObjects = GameObject.FindObjectsOfType<SavedCore>();
+        PersistentData[] savedData = new PersistentData[savedObjects.Length];
+        for (int i = 0; i < savedObjects.Length; i++)
+        {
+            savedData[i] = savedObjects[i].createData();
+        }
+
+        MultiData result = new MultiData();
+        result.setData(savedData);
+        return result;
     }
 
     public static void saveScene(string filename)
@@ -19,6 +29,12 @@ public class SaveLoadManager
         string path = Application.persistentDataPath + "/" + filename + ".bin";
 
         PersistentData data = buildDataFromScene();
+
+        TimeData timeData = new TimeData();
+
+        timeData.saveData(null);
+
+        data.addData(timeData);
 
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -31,6 +47,8 @@ public class SaveLoadManager
 
     public static void loadScene(string filename)
     {
+        prefab_database = Resources.Load<PrefabDatabase>("PrefabDatabase");
+
         string path = Application.persistentDataPath + "/" + filename + ".bin";
 
         BinaryFormatter formatter = new BinaryFormatter();
@@ -39,7 +57,7 @@ public class SaveLoadManager
 
         PersistentData loadData = (PersistentData)formatter.Deserialize(saveFile);
 
-        loadData.loadData();
+        loadData.loadData(null);
 
         saveFile.Close();
     }

@@ -7,23 +7,26 @@ using UnityEngine;
 public class SceneObjectData : PersistentData
 {
     PersistentData[] objectData;
-    public override bool load(GameObject gameObject)
+    protected override GameObject load(GameObject gameObject)
     {
-        return false;
+        return null;
+        //return false;
     }
 
-    public override bool save(GameObject gameObject)
+    protected override GameObject save(GameObject gameObject)
     {
-        SavedObject[] dataIn = GameObject.FindObjectsOfType<SavedObject>();
+        SavedCore[] dataIn = GameObject.FindObjectsOfType<SavedCore>();
         objectData = new PersistentData[dataIn.Length];
 
+        return null;
+        /*
         for (int i = 0; i < dataIn.Length; i++)
         {
             objectData[i] = dataIn[i].createData();
             objectData[i].save(null);
         }
-
-        return true;
+        */
+        //return true;
     }
 
 }

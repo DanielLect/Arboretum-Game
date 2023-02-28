@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    //movement rotation and zoom speed
     public float movementSpeed = 1;
     public float rotationSpeed = 1;
     public float zoomSpeed = 1;
@@ -70,8 +71,9 @@ public class CameraController : MonoBehaviour
         Vector3 inner_pivot_rotation = new Vector3(-1 * Input.GetAxis(input_mouse_y), 0);
 
 
-        //rotate
+        //rotate the outer pivot around the Y axis
         transform.Rotate(rotationSpeed * outer_pivot_rotation, Space.Self);
+        //rotate the inner pivot around the X axis
         innerPivot.transform.Rotate(rotationSpeed * inner_pivot_rotation, Space.Self);
 
         //set the z rotation to 0 as the 0 orientation should always stay the same
