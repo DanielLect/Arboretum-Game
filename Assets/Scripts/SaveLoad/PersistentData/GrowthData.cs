@@ -6,20 +6,20 @@ using UnityEngine;
 public class GrowthData : PersistentData
 {
 
-    float age;
-    float deltaGrowth;
+    //float age;
+    //float deltaGrowth;
     protected override GameObject load(GameObject gameObject)
     {
-        gameObject.GetComponent<Growth>().age = age;
-        gameObject.GetComponent<Growth>().deltaGrowth = deltaGrowth;
+        //gameObject.GetComponent<Growth>().age = age;
+        //gameObject.GetComponent<Growth>().deltaGrowth = deltaGrowth;
 
         return gameObject;
     }
 
     protected override GameObject save(GameObject gameObject)
     {
-        age = gameObject.GetComponent<Growth>().age;
-        deltaGrowth = gameObject.GetComponent<Growth>().deltaGrowth;
+        //age = gameObject.GetComponent<Growth>().age;
+        //deltaGrowth = gameObject.GetComponent<Growth>().deltaGrowth;
         return gameObject;
     }
 

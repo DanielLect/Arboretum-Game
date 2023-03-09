@@ -15,8 +15,6 @@ public class SeasonDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int season = (int) TimeManager.Get().currentSeason;
-
-        text.text = SeasonManager.Get().seasons[season].title;
+        text.text = SeasonManager.Get().getCurrentSeason().title;
     }
 }

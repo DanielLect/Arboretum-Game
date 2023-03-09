@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Spring
   m_EditorClassIdentifier: 
   title: Spring
+  useSnow: 0
+  precipitationMinimum: 0.4
+  precipitationMaximum: 0.7

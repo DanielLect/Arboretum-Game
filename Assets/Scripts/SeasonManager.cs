@@ -5,7 +5,8 @@ using UnityEngine;
 public class SeasonManager : MonoBehaviour
 {
 
-    public Season[] seasons;
+    [SerializeField]
+    private Season[] seasons;
 
     static SeasonManager manager;
 
@@ -17,6 +18,11 @@ public class SeasonManager : MonoBehaviour
     void Start()
     {
         manager = this;
+    }
+
+    public Season getCurrentSeason()
+    {
+        return seasons[(int)TimeManager.Get().currentSeason];
     }
 
     // Update is called once per frame

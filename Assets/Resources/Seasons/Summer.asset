@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Summer
   m_EditorClassIdentifier: 
   title: Summer
+  useSnow: 0
+  precipitationMinimum: 0.5
+  precipitationMaximum: 0.8

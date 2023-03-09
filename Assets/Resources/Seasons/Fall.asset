@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Fall
   m_EditorClassIdentifier: 
   title: Fall
+  useSnow: 0
+  precipitationMinimum: 0.3
+  precipitationMaximum: 0.5

@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Winter
   m_EditorClassIdentifier: 
   title: Winter
+  useSnow: 1
+  precipitationMinimum: 0.35
+  precipitationMaximum: 0.5
