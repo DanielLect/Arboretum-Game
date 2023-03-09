@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129c30f17be8d340b47ce420c7f8294, type: 3}
+  m_Name: Plant Sound
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 29ade4479681c3442b46d3aa7f5b995c, type: 3}
+  - {fileID: 8300000, guid: 2608d436cb833684dacf447e9ed78998, type: 3}
+  - {fileID: 8300000, guid: 0b3704b6df6e8fc4ebccb05a6402df18, type: 3}
+  - {fileID: 8300000, guid: 50ae2d417aa9f0149a8f79af5850c2e3, type: 3}
+  - {fileID: 8300000, guid: 0844fb14596deae418c8c76f679d04aa, type: 3}
+  - {fileID: 8300000, guid: 81da420a662403849bed57d8cb8c0d17, type: 3}
+  - {fileID: 8300000, guid: 1049970449fcaaf4fa325246255746d1, type: 3}
+  - {fileID: 8300000, guid: e06f278e998a4eb46b98c152f8fd3373, type: 3}
+  - {fileID: 8300000, guid: 1c159c1dca8ebb140b63b2822c51d083, type: 3}
+  - {fileID: 8300000, guid: cacf76b9d7a30204bb917cd8a0f213d6, type: 3}
+  volume: 1
+  pitch: 1
+  pitchVariance: 0
