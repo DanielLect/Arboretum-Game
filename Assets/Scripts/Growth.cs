@@ -29,6 +29,7 @@ public class Growth : MonoBehaviour
     public int treeStage;
 
     public float[] starting_age;
+    public float ending_age;
     public float[] ending_size;
     public float[] required_sunlight;
     public float[] required_water;
@@ -38,7 +39,7 @@ public class Growth : MonoBehaviour
     void Update()
     {
         treeStage = TreeStage();
-        age += GetTimeScale();
+        age += GetTimeScale() * NutrientsMetModifier();
         growthRate = UpdateGrowthRate(TreeStage());
         if (!NutrientsMet())
         {
@@ -72,17 +73,21 @@ public class Growth : MonoBehaviour
             {
                 return 0f;
             }
-            return ending_size[tree_int] * (1 / starting_age[tree_int]);
+            return ending_size[tree_int] * (1 / ending_age);
         }
         return ending_size[tree_int] * (1 / starting_age[tree_int + 1]);
 
 
     }
-    float GetSunlight()
+    public float GetSunlight()
     { 
         return SunManager.Get().dayValue*sunlight; 
     }
-    float GetWater()
+    public float getAge()
+    {
+        return age;
+    }
+    public float GetWater()
     {
         return water;
     }
@@ -98,5 +103,14 @@ public class Growth : MonoBehaviour
     {
         int temp = TreeStage();
         return (required_sunlight[temp] <= GetSunlight() && required_water[temp] <= GetWater());
+    }
+
+    float NutrientsMetModifier()
+    {
+        if (NutrientsMet())
+        {
+            return 1;
+        }
+        return 0;
     }
 }
