@@ -485,6 +485,8 @@ GameObject:
   - component: {fileID: 3611549991801308214}
   - component: {fileID: 313555500858908523}
   - component: {fileID: -8730481646153591339}
+  - component: {fileID: -2403730421253901247}
+  - component: {fileID: 6037699982600436677}
   m_Layer: 7
   m_Name: oak_tree
   m_TagString: Untagged
@@ -543,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a83420ad33d6054a886a8fb79f1ef37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5
+  id: 7
 --- !u!114 &7106461747304739836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +685,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6229741255081194220, guid: 903f5911f9998b5479fd6043fad9ef26, type: 3}
   selectedGraphic: {fileID: 3692417260767259010}
+--- !u!114 &-2403730421253901247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757303121680689796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50c313c537a93c4192ad666d5b2cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 6
+  intensity: 3
+--- !u!114 &6037699982600436677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757303121680689796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbc9cb33aac0dc43bf970a9d0b7e512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1757303121754250700
 GameObject:
   m_ObjectHideFlags: 0

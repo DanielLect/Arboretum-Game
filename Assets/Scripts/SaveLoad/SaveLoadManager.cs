@@ -31,10 +31,14 @@ public class SaveLoadManager
         PersistentData data = buildDataFromScene();
 
         TimeData timeData = new TimeData();
+        WorldGenData worldData = new WorldGenData();
 
         timeData.saveData(null);
+        worldData.saveData(null);
 
         data.addData(timeData);
+
+        data.addData(worldData);
 
         BinaryFormatter formatter = new BinaryFormatter();
 

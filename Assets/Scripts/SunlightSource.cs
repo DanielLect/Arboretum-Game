@@ -7,6 +7,8 @@ public class SunlightSource : MonoBehaviour
 {
     public float sunlightGain;
     GrowthCollection growthCollection;
+
+    SunlightBlocker[] sunBlockers;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class SunlightSource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        sunBlockers = FindObjectsOfType<SunlightBlocker>();
 
         foreach (GrowthResource resource in growthCollection.getAllSceneResources())
         {
@@ -28,6 +31,23 @@ public class SunlightSource : MonoBehaviour
 
     float calculateSunlightGain(GrowthResource resource)
     {
-        return sunlightGain * SunManager.Get().dayValue;
+        float sunBlock = 0;
+        for (int i = 0; i < sunBlockers.Length; i++)
+        {
+            float tempSunBlock = sunBlockers[i].getValue(resource.transform);
+            if (tempSunBlock > sunBlock)
+            {
+                sunBlock = tempSunBlock;
+            }
+        }
+
+        float rainValue = 1-WeatherManager.Get().getPrecipitationValue();
+
+        float result = rainValue * sunlightGain * SunManager.Get().dayValue - sunBlock;
+        if (result < 0)
+        {
+            result = 0;
+        }
+        return result;
     }
 }

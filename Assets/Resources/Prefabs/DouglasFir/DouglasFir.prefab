@@ -104,6 +104,8 @@ GameObject:
   - component: {fileID: 3038130878315352772}
   - component: {fileID: 2048767758301170073}
   - component: {fileID: 2224865387117445927}
+  - component: {fileID: 1194123797364294706}
+  - component: {fileID: 3466436632582823151}
   m_Layer: 7
   m_Name: DouglasFir
   m_TagString: Untagged
@@ -144,7 +146,7 @@ MonoBehaviour:
   - {fileID: 6119248164516092846}
   - {fileID: 3038130878315352772}
   - {fileID: 2048767758301170073}
-  tree_name: Oak
+  tree_name: Douglas Fir
   isDecidous: 1
   winterSeason: {fileID: 11400000, guid: 7cc8b30655eca624787ed32ffc2e8359, type: 2}
   start_size: {x: 0.25, y: 0.25, z: 0.25}
@@ -162,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a83420ad33d6054a886a8fb79f1ef37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5
+  id: 3
 --- !u!114 &8838436539735221518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +304,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6229741255081194220, guid: 903f5911f9998b5479fd6043fad9ef26, type: 3}
   selectedGraphic: {fileID: 3101097322949230448}
+--- !u!114 &1194123797364294706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23757809715149942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50c313c537a93c4192ad666d5b2cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 6
+  intensity: 8
+--- !u!114 &3466436632582823151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23757809715149942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbc9cb33aac0dc43bf970a9d0b7e512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &23757809771924286
 GameObject:
   m_ObjectHideFlags: 0
