@@ -28,7 +28,6 @@ public class MeshCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        createShape();
     }
 
     Vector3[] makeVertices(int xSize, int zSize)
@@ -120,8 +119,9 @@ public class MeshCreator : MonoBehaviour
     }
 
 
-    void createShape()
+    public void createTerrain(float seed)
     {
+        this.seed = seed;
 
         Mesh upperMesh = new Mesh();
         Mesh lowerMesh = new Mesh();
@@ -159,23 +159,31 @@ public class MeshCreator : MonoBehaviour
     }
 
 
+    bool needsGizmoRedraw = false;
+
+    private void OnValidate()
+    {
+        needsGizmoRedraw = true;
+    }
+
     [SerializeField]
     private bool gizmosDrawHeight = false;
+    Vector3[] verticeGizmo;
+    int[] trianglesGizmo;
 
     private void OnDrawGizmos()
     {
-        Mesh mesh = new Mesh();
+        if (needsGizmoRedraw)
+        {
 
-        Vector3[] verticeGizmo = makeVertices(gridSize, gridSize);
-        int[] trianglesGizmo = Triangle.TrianglesToInt(makeTriangles(gridSize, gridSize));
+            verticeGizmo = makeVertices(gridSize, gridSize);
+            trianglesGizmo = Triangle.TrianglesToInt(makeTriangles(gridSize, gridSize));
+        }
 
         foreach (Vector3 vec3 in verticeGizmo)
         {
-            Gizmos.DrawWireSphere(transform.position+vec3, 0.02f);
+            Gizmos.DrawWireSphere(transform.position + vec3, 0.02f);
         }
-
-        mesh.vertices = verticeGizmo;
-        mesh.triangles = trianglesGizmo;
 
         for (int i = 0; i < trianglesGizmo.Length; i += 3)
         {
@@ -194,5 +202,7 @@ public class MeshCreator : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawCube(transform.position + max / 2 + new Vector3(0, heightSeparation, 0), max + new Vector3(0, 0.1f, 0));
         }
+
+
     }
 }

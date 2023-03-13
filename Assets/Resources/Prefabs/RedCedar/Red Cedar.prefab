@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3983483238078033181}
   - component: {fileID: 8147732393469374133}
   - component: {fileID: 4658235693888413908}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3425330105800322825}
   - component: {fileID: 607353578721188803}
   - component: {fileID: 5825160858240122957}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2282293106774196907}
   - component: {fileID: 2282293106774196901}
   - component: {fileID: 2282293106774196906}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2282293107362175633}
   - component: {fileID: 6201498086529993858}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,9 @@ GameObject:
   - component: {fileID: 3878066610037850988}
   - component: {fileID: 258567256620750897}
   - component: {fileID: 78951184950317711}
-  m_Layer: 7
+  - component: {fileID: -5612603112716823549}
+  - component: {fileID: -7810479886722059690}
+  m_Layer: 8
   m_Name: Red Cedar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a83420ad33d6054a886a8fb79f1ef37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5
+  id: 8
 --- !u!114 &7300438158489810086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,9 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d440e3b9d69fe6a449fef1cc0404c79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunlight_use_per_second: 6
+  sunlight_use_per_second: 3
   water_use_per_second: 2
-  maxGrowthSecond: 30
+  maxGrowthSecond: 120
 --- !u!114 &5409910774687369734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,9 +492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d440e3b9d69fe6a449fef1cc0404c79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunlight_use_per_second: 6
+  sunlight_use_per_second: 5
   water_use_per_second: 4
-  maxGrowthSecond: 30
+  maxGrowthSecond: 350
 --- !u!114 &3878066610037850988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,9 +507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d440e3b9d69fe6a449fef1cc0404c79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunlight_use_per_second: 6
+  sunlight_use_per_second: 5
   water_use_per_second: 6
-  maxGrowthSecond: 30
+  maxGrowthSecond: 350
 --- !u!114 &258567256620750897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,9 +522,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d440e3b9d69fe6a449fef1cc0404c79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunlight_use_per_second: 6
+  sunlight_use_per_second: 5
   water_use_per_second: 8
-  maxGrowthSecond: 30
+  maxGrowthSecond: 700
 --- !u!114 &78951184950317711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +539,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6229741255081194220, guid: 903f5911f9998b5479fd6043fad9ef26, type: 3}
   selectedGraphic: {fileID: 3814968290790371032}
+--- !u!114 &-5612603112716823549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2282293107419229662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50c313c537a93c4192ad666d5b2cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 8
+  intensity: 6
+--- !u!114 &-7810479886722059690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2282293107419229662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbc9cb33aac0dc43bf970a9d0b7e512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2282293108226501754
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +576,7 @@ GameObject:
   - component: {fileID: 2282293108226501749}
   - component: {fileID: 2282293108226501751}
   - component: {fileID: 2282293108226501748}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2282293108295255855}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: trunk_origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +693,7 @@ GameObject:
   - component: {fileID: 2282293108358578140}
   - component: {fileID: 2282293108358578142}
   - component: {fileID: 2282293108358578143}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Winter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +776,7 @@ GameObject:
   - component: {fileID: 9006897313943034049}
   - component: {fileID: 8538453087656241170}
   - component: {fileID: 1886402511389622641}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: trunkSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +860,7 @@ GameObject:
   - component: {fileID: 8241092098526747353}
   - component: {fileID: 3271239387805836483}
   - component: {fileID: 1367539832662943772}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FoliageSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +943,7 @@ GameObject:
   - component: {fileID: 3630951074025540362}
   - component: {fileID: 7473575359584239028}
   - component: {fileID: 6169577620504037689}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

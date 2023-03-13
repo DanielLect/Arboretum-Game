@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 23757809621701379}
   - component: {fileID: 23757809621701389}
   - component: {fileID: 23757809621701378}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,9 @@ GameObject:
   - component: {fileID: 3038130878315352772}
   - component: {fileID: 2048767758301170073}
   - component: {fileID: 2224865387117445927}
-  m_Layer: 7
+  - component: {fileID: 1194123797364294706}
+  - component: {fileID: 3466436632582823151}
+  m_Layer: 8
   m_Name: DouglasFir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +146,7 @@ MonoBehaviour:
   - {fileID: 6119248164516092846}
   - {fileID: 3038130878315352772}
   - {fileID: 2048767758301170073}
-  tree_name: Oak
+  tree_name: Douglas Fir
   isDecidous: 1
   winterSeason: {fileID: 11400000, guid: 7cc8b30655eca624787ed32ffc2e8359, type: 2}
   start_size: {x: 0.25, y: 0.25, z: 0.25}
@@ -162,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a83420ad33d6054a886a8fb79f1ef37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5
+  id: 3
 --- !u!114 &8838436539735221518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,9 +242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d440e3b9d69fe6a449fef1cc0404c79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunlight_use_per_second: 6
+  sunlight_use_per_second: 4
   water_use_per_second: 2
-  maxGrowthSecond: 30
+  maxGrowthSecond: 90
 --- !u!114 &6119248164516092846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sunlight_use_per_second: 6
   water_use_per_second: 4
-  maxGrowthSecond: 30
+  maxGrowthSecond: 300
 --- !u!114 &3038130878315352772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sunlight_use_per_second: 6
   water_use_per_second: 6
-  maxGrowthSecond: 30
+  maxGrowthSecond: 300
 --- !u!114 &2048767758301170073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sunlight_use_per_second: 6
   water_use_per_second: 8
-  maxGrowthSecond: 30
+  maxGrowthSecond: 900
 --- !u!114 &2224865387117445927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +304,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6229741255081194220, guid: 903f5911f9998b5479fd6043fad9ef26, type: 3}
   selectedGraphic: {fileID: 3101097322949230448}
+--- !u!114 &1194123797364294706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23757809715149942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50c313c537a93c4192ad666d5b2cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 6
+  intensity: 8
+--- !u!114 &3466436632582823151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23757809715149942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbc9cb33aac0dc43bf970a9d0b7e512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &23757809771924286
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23757809771924281}
   - component: {fileID: 5325532123268865322}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +395,7 @@ GameObject:
   - component: {fileID: 23757811055099357}
   - component: {fileID: 23757811055099359}
   - component: {fileID: 23757811055099356}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +478,7 @@ GameObject:
   - component: {fileID: 23757811191459444}
   - component: {fileID: 23757811191459446}
   - component: {fileID: 23757811191459447}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Winter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23757811263411847}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: trunk_origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +596,7 @@ GameObject:
   - component: {fileID: 3490577174833938081}
   - component: {fileID: 1699530772790168171}
   - component: {fileID: 5705799143286657509}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +693,7 @@ GameObject:
   - component: {fileID: 2931876348603464885}
   - component: {fileID: 7992408942411169565}
   - component: {fileID: 6871739084016873852}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +776,7 @@ GameObject:
   - component: {fileID: 7135636426103933289}
   - component: {fileID: 7603940114341542330}
   - component: {fileID: 420501564834533593}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: trunkSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +860,7 @@ GameObject:
   - component: {fileID: 7901019632797666161}
   - component: {fileID: 3647339567512761707}
   - component: {fileID: 937391783848950196}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FoliageSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +943,7 @@ GameObject:
   - component: {fileID: 3286370044277185186}
   - component: {fileID: 8669231191475137564}
   - component: {fileID: 5361127228760004753}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Foliage_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

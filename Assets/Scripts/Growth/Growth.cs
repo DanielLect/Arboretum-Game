@@ -68,6 +68,26 @@ public class Growth : MonoBehaviour
         return Mathf.Clamp(sum / growthStages.Length,0,1);
     }
 
+    public void setPercentage(float input)
+    {
+        float percentage = input*growthStages.Length;
+        currentStage = 0;
+        while (true)
+        {
+            if (percentage > 1)
+            {
+                getCurrentStage().setPercentage(1);
+                percentage += -1;
+                currentStage++;
+            } else
+            {
+                getCurrentStage().setPercentage(percentage);
+                percentage += -percentage;
+                break;
+            }
+        }
+    }
+
     void growCurrent()
     {
         if (currentStage < growthStages.Length)

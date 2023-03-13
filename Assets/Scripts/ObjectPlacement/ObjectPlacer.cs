@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
+public class ObjectPlacer : MonoBehaviour, IPointerDownHandler, IState
 {
     public GameObject placed_prefab;
     public GameObject preview_prefab;
@@ -23,11 +23,12 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
     public PlacementRestriction placementRestriction;
     public void OnPointerDown(PointerEventData eventData)
     {
-        if ((object) PlayerStateManager.Get().getCurrentState() == this)
+        if ((object)PlayerStateManager.Get().getCurrentState() == this)
         {
             PlayerStateManager.Get().clearState();
             SoundManager.Get().playSound(clickSound);
-        } else
+        }
+        else
         {
             PlayerStateManager.Get().setCurrentState(this);
             SoundManager.Get().playSound(clickSound);
@@ -43,7 +44,7 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public bool endState()
@@ -97,7 +98,8 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
                     {
                         placePrefab(hit);
                         SoundManager.Get().playSound(placeSound);
-                    } else
+                    }
+                    else
                     {
                         SoundManager.Get().playSound(errorSound);
 
@@ -112,7 +114,10 @@ public class ObjectPlacer : MonoBehaviour,IPointerDownHandler, IState
     {
         GameObject placedClone = GameObject.Instantiate(placed_prefab);
         placedClone.transform.position = hit.point;
-        placedClone.transform.Rotate(hit.normal, Random.value * 360f, Space.Self);
+        placedClone.transform.rotation = Quaternion.LookRotation(hit.normal, Vector3.up);
+        placedClone.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+        placedClone.transform.Rotate(new Vector3(0, Random.value * 360f, 0), Space.Self);
+        //placedClone.transform.Rotate(hit.normal, Random.value * 360f, Space.Self);
 
     }
 }

@@ -43,6 +43,11 @@ public class GrowthStage : MonoBehaviour
         return Mathf.Clamp(currentGrowth / maxGrowthSecond, 0, 1);
     }
 
+    public void setPercentage(float percentage)
+    {
+        currentGrowth = percentage* maxGrowthSecond;
+    }
+
     public bool Advance()
     {
         if (currentGrowth >= maxGrowthSecond)

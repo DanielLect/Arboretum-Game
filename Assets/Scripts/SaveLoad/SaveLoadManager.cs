@@ -31,10 +31,14 @@ public class SaveLoadManager
         PersistentData data = buildDataFromScene();
 
         TimeData timeData = new TimeData();
+        WorldGenData worldData = new WorldGenData();
 
         timeData.saveData(null);
+        worldData.saveData(null);
 
         data.addData(timeData);
+
+        data.addData(worldData);
 
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -53,7 +57,10 @@ public class SaveLoadManager
 
         BinaryFormatter formatter = new BinaryFormatter();
 
+
         FileStream saveFile = File.Open(path, FileMode.Open);
+
+        
 
         PersistentData loadData = (PersistentData)formatter.Deserialize(saveFile);
 

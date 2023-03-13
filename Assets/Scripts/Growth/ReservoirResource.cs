@@ -9,6 +9,15 @@ public class ReservoirResource : GrowthResource
     private float maxAmount;
 
 
+    public float getCurrentAmount()
+    {
+        return currentAmount;
+    }
+    public void setCurrentAmount(float input)
+    {
+        this.currentAmount = input;
+    }
+
     public override void Gain(float amount)
     {
         currentAmount += amount;
